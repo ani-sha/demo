@@ -4,11 +4,16 @@ import java.util.List;
 
 public interface CustomerDAO {
 
-    public Customer getCustomer(Integer id);
+    List<Customer> listCustomer();
 
-    public List<Customer> listCustomer();
+    void setDataSource(DataSources ds);
 
-    public void setDataSource(DataSources ds);
+    boolean createCustomer(Customer customer);
 
-    public void create(Integer id, String ssn, String name);
+    boolean deleteCustomer(Customer customer);
+
+    boolean updateCustomer(Customer customer);
+
+    Customer getCustomerById(Long id);
+
 }

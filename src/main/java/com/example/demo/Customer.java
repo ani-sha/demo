@@ -6,6 +6,14 @@ public class Customer {
     private String name;
     private String ssn;
 
+    public Customer() {}
+
+    public Customer(Integer id, String name, String ssn) {
+        this.id = id;
+        this.name = name;
+        this.ssn = ssn;
+    }
+
     public void setId(Integer id) {
         this.id = id;
     }
@@ -28,6 +36,11 @@ public class Customer {
 
     public String getName() {
         return name;
+    }
+
+    @Override
+    public String toString() {
+        return "Customer { " + " ID = " + id + " NAME = " + name + " SSN = " + ssn + " }";
     }
 
 }
